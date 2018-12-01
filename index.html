@@ -7,7 +7,9 @@
 <body>
 	<header class="main-header">
 		<nav class="main-navigation">
-			<a class="main-header-logo"><img src="img/index-logo.svg" width="200" height="100" alt="Логотип барбершопа Бородиский"></a>
+			<a class="main-header-logo">
+				<img src="img/index-logo.svg" width="368" height="153 " alt="Логотип барбершопа Бородиский">
+			</a>
 			<ul class="site-navigation">
 				<li><a href="info.html">Информация</a></li>
 				<li><a href="news.html">Новости</a></li>
@@ -16,14 +18,14 @@
 				<li><a href="contacts.html">Контакты</a></li>
 			</ul>
 			<ul class="user-navigation">
-				<li class="login-link">Вход</li>
+				<li><a class="login-link" href="login.html">Вход</a></li>
 			</ul>
 		</nav>
 	</header>
 	<main class="container">
-		<h1 class="visability-hidden">Барбершоп "Бородинский"</h1>
+		<h1 class="visually-hidden">Барбершоп "Бородинский"</h1>
 		<section class="fetures">
-			<h2 class="visability-hidden">Преимущества</h2>
+			<h2 class="visually-hidden">Преимущества</h2>
 			<ul class="features-list">
 				<li class="features-item">
 					<h3>Быстро</h3>
@@ -58,16 +60,13 @@
 		</section>
 		<section class="gallery">
 			<h2>Фотогалерея</h2>
-			<ul class="gallery-list">
-				<li class="gallery-item">
-					<a href="#">
-						<img src="img/slider-1.jpg" alt="Первая картинка слайдера" width="300" height="200">
-					</a>
-				</li>
-				
-			</ul>
-			<button type="button" class="gallery-prev">Назад</button>
-			<button type="button" class="gallery-next">Вперед</button>
+			<figure class="gallery-list">
+				<a href="#">
+					<img src="img/slider-1.jpg" alt="Первая картинка слайдера" width="286" height="164">
+				</a>
+			</figure>
+			<button type="button" class="button gallery-button gallery-button-back">Назад</button>
+			<button type="button" class="button gallery-button gallery-button-next">Вперед</button>
 		</section>
 		<section class="contact-information">
 			<h2>Контактная информация</h2>
@@ -85,7 +84,29 @@
 		<section class="sign-up">
 			<h2>Записаться</h2>
 			<p class="sign-up-info">УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ </p>
-			<!--форма-->
+			<form action="https://echo.htmlacademy.ru" method="post" class="sign-up-form">
+
+				<p class="sing-up-item">
+					<label for="sing-up-date">Дата</label>
+					<input type="text" id="sing-up-date" name="date" placeholder="08.20.2017" value="">
+				</p>
+				<p class="sing-up-item">
+					<label for="sing-up-time">Время</label>
+					<input type="text" id="sing-up-time" name="time" placeholder="12:00" value="">
+				</p>
+				<p class="sing-up-item">
+					<label for="sing-up-name">Имя</label>
+					<input type="text" id="sing-up-name" name="name" placeholder="Борода" value="">
+				</p>
+				<p class="sing-up-item">
+					<label for="sing-up-phone">Телефон</label>
+					<input type="tel" id="sing-up-phone" name="phone" placeholder="+7 123 456-78-90" value="">
+				</p>
+				<button type="submit" class="button">Записаться</button>
+				
+				
+				
+			</form>
 		</section>
 	</main>
 	<footer class="main-footer">
@@ -110,13 +131,34 @@
 	</footer>
 	<section class="modal modal-login">
 		<h2>Личный кабинет</h2>
-		<p>ВВедите пожалуйста свой логин и пароль</p>
-		<!--форма-->
-		<span class="modal-close">x</span>
+		<p>Введите пожалуйста свой логин и пароль</p>
+		<form action="https://echo.htmlacademy.ru" method="post" class="login-form">
+			<p>
+				<label for="user-login" class="visually-hidden">Логин</label>
+				<input type="text" id="user-login" name="login" placeholder="Логин"  class="login-icon-user">
+			</p>
+			<p>
+				<label for="user-password" class="visually-hidden">Пароль</label>
+				<input type="password" id="user-password" name="password" placeholder="Пароль" class="login-icon-password">
+			</p>
+			<p class="login-password-info">
+				
+				<label class="login-checkbox">
+					<input type="checkbox" name="remember">
+					Запомнить меня
+				</label>
+				<a href="#" class="restore">Я забыл пароль</a>
+			</p>
+			<button type="submit" class="button">Войти</button>
+		</form>
+		<button type="button" class="modal-close">Закрыть</button>
 	</section>
 	<section class="modal-map">
-		<h2 class="visability-hidden">Как к нам добраться</h2>
-		<span class="modal-close">x</span>
+		<h2 class="visually-hidden">Как к нам добраться</h2>
+		 <p>
+		 	<img src="img/map.jpg" width="790" height="560" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург">
+		 </p>
+		<button type="button" class="modal-close">Закрыть</button>
 	</section>
 </body>
 </html>
